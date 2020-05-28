@@ -13,6 +13,7 @@
 
 ! Instrucciones de compilación:
 ! gfortran -Wall -pedantic -std=f95 -c FX.f90
+! gfortran -Wall -pedantic -std=f95 -c GX.f90
 ! gfortran -Wall -pedantic -std=f95 -c funciones.f90
 
 MODULE funciones
@@ -21,9 +22,18 @@ MODULE funciones
   INTERFACE
     FUNCTION Fx(xi,yi)
       IMPLICIT NONE
-        REAL(8), INTENT(IN):: xi,yi
-        REAL(8):: Fx
+      REAL(8), INTENT(IN):: xi,yi
+      REAL(8):: Fx
     END FUNCTION Fx
+  END INTERFACE
+  
+  ! Funcion G(x,y)
+  INTERFACE
+    FUNCTION Gx(xi,yi)
+      IMPLICIT NONE
+      REAL(8), INTENT(IN):: xi,yi
+      REAL(8):: Gx
+    END FUNCTION Gx
   END INTERFACE
 
 END MODULE
