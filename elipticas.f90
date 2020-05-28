@@ -150,7 +150,7 @@ PROGRAM poisson
       ! paso 18
       DO i=1, n-1
         DO j=1, m-1
-          WRITE (12,*) i,j,x(i),y(j),w(i,j)
+          WRITE (14,*) i,j,x(i),y(j),w(i,j)
         END DO
       END DO
       !paso 19
